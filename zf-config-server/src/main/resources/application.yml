@@ -1,0 +1,19 @@
+spring:
+    application:
+        name: zf-config-server
+    cloud:
+        config:
+          label: master
+          server:
+            git:
+              uri: https://github.com/aileensky/zf-config-repo/
+              searchPaths: respo
+
+
+server:
+    port: 8771 #启动端口
+
+eureka:
+    client:
+        service-url:
+          defaultZone: http://localhost:8761/eureka

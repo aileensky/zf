@@ -16,6 +16,8 @@
 
     <modules>
         <module>zf-center</module>
+        <module>zf-config</module>
+        <module>zf-config-client</module>
     </modules>
     <packaging>pom</packaging>
 

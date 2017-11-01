@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: zf-config-client #用于定位git中的资源
+  cloud:
+    config:
+      discovery:
+        service-id: zf-config-server #用于定位center中的服务
+        enabled: true
+      label: master  # git 分支
+      profile: dev
+
+server:
+    port: 8781 #启动端口
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+
