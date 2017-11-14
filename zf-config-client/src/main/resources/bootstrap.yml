@@ -13,6 +13,10 @@ spring:
 server:
     port: 9000 #启动端口
 
+management:
+    security:
+      enabled: false
+
 eureka:
     client:
         serviceUrl:
