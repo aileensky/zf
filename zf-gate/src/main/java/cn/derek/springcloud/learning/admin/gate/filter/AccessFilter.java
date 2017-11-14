@@ -1,5 +1,6 @@
 package cn.derek.springcloud.learning.admin.gate.filter;
 
+import cn.derek.springcloud.learning.admin.common.Constants;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import org.slf4j.Logger;
@@ -37,7 +38,7 @@ public class AccessFilter extends ZuulFilter{
         if(accessToken == null) {
             log.warn("access token is empty");
             ctx.setSendZuulResponse(false);
-            ctx.setResponseStatusCode(401);
+            ctx.setResponseStatusCode(Constants.EX_INVALID_TOKEN);
             return null;
         }
         log.info("access token ok");

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>zf-api-gate</artifactId>
+    <artifactId>zf-gate</artifactId>
 
     <dependencies>
         <dependency>
@@ -28,7 +28,7 @@
     </dependencies>
 
     <build>
-        <finalName>zf-api-gate</finalName>
+        <finalName>zf-gate</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

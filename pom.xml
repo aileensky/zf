@@ -21,7 +21,7 @@
         <module>zf-admin</module>
         <module>zf-common</module>
         <module>zf-monitor</module>
-        <module>zf-api-gate</module>
+        <module>zf-gate</module>
         <module>zf-auth</module>
     </modules>
     <packaging>pom</packaging>
