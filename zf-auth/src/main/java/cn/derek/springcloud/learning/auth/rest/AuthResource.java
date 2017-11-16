@@ -19,7 +19,7 @@ public class AuthResource {
     private AuthService authService;
 
     @PostMapping("/authenticate")
-    public ResponseEntity<?> authenticate(@RequestBody LoginVM loginVM) throws Exception{
+    public ResponseEntity<?> authenticate(LoginVM loginVM) throws Exception{
         final String token = authService.login(loginVM);
         return ResponseEntity.ok(new JwtAuthenticationResponse(token));
     }

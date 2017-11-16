@@ -11,8 +11,8 @@ zuul:
   prefix: /api #为zuul设置一个公共的前缀
   routes:
     config:
-      path: /config-client/**
-      serviceId: zf-config-client
+      path: /auth/**
+      serviceId: zf-auth
 
 eureka:
      instance:
@@ -21,4 +21,4 @@ eureka:
         registerWithEureka: true
         fetchRegistry: true
         serviceUrl:
-          defaultZone: ${eureka.url1},${eureka.url2}
+          defaultZone: http://192.168.0.31:7001/eureka/,http://192.168.0.31:7002/eureka/

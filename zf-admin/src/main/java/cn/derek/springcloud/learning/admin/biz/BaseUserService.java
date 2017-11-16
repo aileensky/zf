@@ -1,11 +1,13 @@
 package cn.derek.springcloud.learning.admin.biz;
 
+import cn.derek.springcloud.learning.api.vo.user.UserInfo;
 import cn.derek.springcloud.learning.common.reponse.TableResultResponse;
 import cn.derek.springcloud.learning.common.utils.Query;
 import cn.derek.springcloud.learning.admin.entity.BaseUser;
 import cn.derek.springcloud.learning.admin.mapper.BaseUserMapper;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
@@ -19,10 +21,14 @@ public class BaseUserService {
     @Autowired
     private BaseUserMapper baseUserMapper;
 
-    public BaseUser selectByUsername(String username){
+    public UserInfo selectByUsername(String username){
         BaseUser baseUser = new BaseUser();
         baseUser.setUsername(username);
-        return baseUserMapper.selectOne(baseUser);
+        BaseUser select = baseUserMapper.selectOne(baseUser);
+
+        UserInfo userInfo = new UserInfo();
+        BeanUtils.copyProperties(select, userInfo);
+        return userInfo;
     }
 
     public TableResultResponse<BaseUser> selectByQuery(Query query) {

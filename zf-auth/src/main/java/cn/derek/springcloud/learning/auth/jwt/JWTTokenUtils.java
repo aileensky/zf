@@ -2,7 +2,6 @@ package cn.derek.springcloud.learning.auth.jwt;
 
 import cn.derek.springcloud.learning.common.biz.IJWTInfo;
 import cn.derek.springcloud.learning.common.jwt.JWTHelper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
