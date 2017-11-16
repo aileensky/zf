@@ -1,6 +1,6 @@
 package cn.derek.springcloud.learning.admin.gate.filter;
 
-import cn.derek.springcloud.learning.admin.common.Constants;
+import cn.derek.springcloud.learning.common.Constants;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import org.slf4j.Logger;

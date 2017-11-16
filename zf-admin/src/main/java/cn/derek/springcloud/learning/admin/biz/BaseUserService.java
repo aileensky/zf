@@ -1,7 +1,7 @@
 package cn.derek.springcloud.learning.admin.biz;
 
-import cn.derek.springcloud.learning.admin.common.reponse.TableResultResponse;
-import cn.derek.springcloud.learning.admin.common.utils.Query;
+import cn.derek.springcloud.learning.common.reponse.TableResultResponse;
+import cn.derek.springcloud.learning.common.utils.Query;
 import cn.derek.springcloud.learning.admin.entity.BaseUser;
 import cn.derek.springcloud.learning.admin.mapper.BaseUserMapper;
 import com.github.pagehelper.Page;
@@ -18,6 +18,12 @@ public class BaseUserService {
 
     @Autowired
     private BaseUserMapper baseUserMapper;
+
+    public BaseUser selectByUsername(String username){
+        BaseUser baseUser = new BaseUser();
+        baseUser.setUsername(username);
+        return baseUserMapper.selectOne(baseUser);
+    }
 
     public TableResultResponse<BaseUser> selectByQuery(Query query) {
         Example example = new Example(BaseUser.class);

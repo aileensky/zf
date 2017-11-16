@@ -4,15 +4,14 @@ spring:
 
 server:
     port: 8765 #启动端口
-#
-zuul:
-  ignored-services: "*"
-  sensitive-headers:
-  prefix: /api #为zuul设置一个公共的前缀
-  routes:
-    config:
-      path: /config-client/**
-      serviceId: zf-config-client
+
+jwt:
+  token-header: Authorization
+  expire: 3600
+  pri-key:
+    path: jwt/pri.key
+  pub-key:
+    path: jwt/pub.key
 
 eureka:
      instance:

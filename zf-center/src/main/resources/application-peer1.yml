@@ -1,0 +1,11 @@
+spring:
+    application:
+        name: zf-center
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.0.31:7002/eureka/
+
+server:
+    port: 7001
+

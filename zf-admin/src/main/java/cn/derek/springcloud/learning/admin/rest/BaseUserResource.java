@@ -1,8 +1,8 @@
 package cn.derek.springcloud.learning.admin.rest;
 
 import cn.derek.springcloud.learning.admin.biz.BaseUserService;
-import cn.derek.springcloud.learning.admin.common.reponse.TableResultResponse;
-import cn.derek.springcloud.learning.admin.common.utils.Query;
+import cn.derek.springcloud.learning.common.reponse.TableResultResponse;
+import cn.derek.springcloud.learning.common.utils.Query;
 import cn.derek.springcloud.learning.admin.entity.BaseUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -8,6 +8,11 @@
     <artifactId>zf</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <eureka.url1>http://localhost:7001/eureka/</eureka.url1>
+        <eureka.url2>http://localhost:7002/eureka/</eureka.url2>
+    </properties>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -23,6 +28,7 @@
         <module>zf-monitor</module>
         <module>zf-gate</module>
         <module>zf-auth</module>
+        <module>zf-api</module>
     </modules>
     <packaging>pom</packaging>
 
